@@ -1,6 +1,7 @@
 /*Google font 'poppins' */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+/*Configuraciones generales*/
 *{
     padding: 0%;
     margin: 0%;
@@ -48,6 +49,7 @@ header .reproductor {
     box-shadow: 0px 3px 8px #090f1f;
 }
 
+/*Menu*/
 header .menu h1 {
     font-size: 25px;
     margin: 15px 0px 0px 25px;
@@ -64,6 +66,8 @@ header .menu .playlist h4 {
     padding-bottom: 10px;
     color: #4c5262;
     cursor: pointer;
+    display: flex;
+    align-items: center;
     transition: .3s linear;
 }
 
@@ -73,4 +77,39 @@ header .menu .playlist h4:hover{
 
 header .menu .playlist h4 span{
     position: relative;
+    margin-right: 35px;
 }
+
+/*'Icono'*/
+header .menu .playlist h4 span::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border: 2px solid #4c5262;
+    border-radius: 50%;
+    top: -4px;
+    transition: .3s linear;
+}
+
+header .menu .playlist h4:hover span::before{
+    border: 2px solid #ffffff;
+}
+
+header .menu .playlist h4 .icono{
+    display: none;
+}
+
+header .menu .playlist .activo {
+    color: aqua;
+}
+
+header .menu .playlist .activo span{
+    display: none;
+}
+
+header .menu .playlist .activo .icono{
+    display: flex;
+    margin-right: 25px;
+}
+
