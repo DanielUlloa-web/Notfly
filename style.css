@@ -261,3 +261,64 @@ header .reproductor .icon .fa:nth-child(2) {
     margin: 0px 5px;
     transition: .3s linear;
 }
+
+header .reproductor span {
+    color: white;
+    width: 32px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+header .reproductor #start {
+    margin: 0px 0px 0px 25px;
+}
+
+header .reproductor .bar {
+    position: relative;
+    width: 43%;
+    height: 2px;
+    background: rgb(105, 105, 170,.1);
+    margin: 0px 15px 0px 10px;
+}
+
+header .reproductor .bar .bar2 {
+    position: absolute;
+    background: aqua;
+    width: 0%;
+    height: 100%;
+    top: 0;
+}
+header .reproductor .bar .dot {
+    position: absolute;
+    background: aqua;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    left: 0%;
+    top: -1px;
+    transition: 1s linear;
+}
+
+header .reproductor .bar .dot::before {
+    content: '';
+    position: absolute;
+    border: 1px solid aqua;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    left: -6px;
+    top: -6px;
+    box-shadow: inset 0px 0px 3px aqua;
+}
+
+header .reproductor .bar input {
+    position: absolute;
+    width: 100%;
+    top: -6px;
+    left: 0;
+    cursor: pointer;
+    z-index: 999999;
+    transition: 3s linear;
+    opacity: 0;
+}
+
